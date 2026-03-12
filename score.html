@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<script>
+    if (!localStorage.getItem("score")) {
+        window.location.replace("index.html")
+    }
+</script>
+
+<body class="bg-gradient-to-br from-blue-400 via-blue-300 to-purple-400 h-screen ">
+    <div class="w-screen h-screen flex justify-center items-center">
+        <div class="md:w-1/2 w-full shadow-2xl  bg-gradient-to-br from-blue-400 via-blue-300 to-purple-400 p-5 rounded-xl">
+            <div class="w-full bg-blue-200 mx-auto text-center py-7 rounded-xl">
+                <h2 class="text-2xl font-bold">Quiz Finished!</h2>
+                <span class="my-3 block text-gray-500">Your Score</span>
+                <p class="text-2xl font-bold"><span class="your"></span> / <span class="total"></span></p>
+                <button class="back px-3 py-1 text-white bg-blue-500 text-xl mt-4 hover:bg-blue-600 duration-200 rounded-2xl cursor-pointer">Back To Home</button>
+            </div>
+         
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

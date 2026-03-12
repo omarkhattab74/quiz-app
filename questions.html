@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<script>
+    if (!localStorage.getItem("questions")) {
+        window.location.replace("index.html")
+        
+    }
+</script>
+<body class="bg-gradient-to-br from-blue-400 via-blue-300 to-purple-400 h-screen">
+    <div class="w-screen h-screen flex justify-center items-center">
+        <div class="md:w-1/2 w-full shadow-2xl  bg-gradient-to-br from-blue-400 via-blue-300 to-purple-400">
+            <div class="bg-blue-400 p-2 mb-5">
+               <p class="text-center">Question <span class="this-Q-number">10</span> /  <span class="all-Q-number">10</span></p>
+
+           </div>
+
+           <h2 class="text-center my-4 questionTitle">What does HTML stand for?</h2>
+
+           <ul class="px-4">
+            <!-- <label for="firstAnswer">
+                <li class="bg-white p-2 my-2 rounded-xl hover:bg-blue-400 hover:text-white duration-200"> <input type="radio" name="answer" id="firstAnswer" > Hyper Text markup language</li>
+            </label>
+           <label for="secondAnswer">
+             <li class="bg-white p-2 my-2 rounded-xl hover:bg-blue-400 hover:text-white duration-200"> <input type="radio" name="answer" id="secondAnswer"> cascade style sheet</li>
+           </label>
+           <label for="thirdAnswer">
+             <li class="bg-white p-2 my-2 rounded-xl hover:bg-blue-400 hover:text-white duration-200"> <input type="radio" name="answer" id="thirdAnswer"> java script</li>
+           </label>
+           <label for="forthAnswer">
+             <li class="bg-white p-2 my-2 rounded-xl hover:bg-blue-400 hover:text-white duration-200"> <input type="radio" name="answer" id="forthAnswer"> bootstrap tailwind</li>
+           </label> -->
+           </ul>
+
+           <div class="flex justify-between px-5 my-3 items-center">
+            <button class="bg-gray-500 previousBtn hover:bg-gray-700 duration-200  text-white cursor-pointer px-3 py-1 rounded">Previous</button>
+            <button class="bg-blue-500 nextBtn hover:bg-blue-700 duration-200  text-white cursor-pointer px-3 py-1 rounded">Next</button>
+            <button class="bg-green-500 finishBtn hidden hover:bg-green-700 duration-200  text-white cursor-pointer px-3 py-1 rounded">Finish</button>
+           </div>
+  
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
