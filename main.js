@@ -12,6 +12,9 @@ let this_Q_number = document.querySelector(".this-Q-number")
 let li = ""
 let radio = ""
 const back = document.querySelector(".back")
+const time = document.querySelector(".time")
+let seconds =localStorage.getItem("seconds") || 59
+let minutes = localStorage.getItem("minutes") || 9
 
 if (document.querySelector(".all-Q-number")) {
 
@@ -205,8 +208,6 @@ function accountScore() {
     for (let x = 0; x < questions.length; x++) {
         if (String(localStorage.getItem(`${x + 1}`)).trim() === String(questions[x].correct_answer).trim()) {
             score++
-
-
         } 
 
     }
@@ -233,6 +234,32 @@ if (back) {
     })
 }
 
+if (time) {
+    
+    const interval =  setInterval(()=>{
+    seconds--
+    // console.log(timeOut);
+    localStorage.setItem("seconds" , seconds)
+    localStorage.setItem("minutes" , minutes)
+    if (minutes === 0 && seconds === 0) {
+        localStorage.clear()
+        clearInterval(interval)
+        window.location.replace("index.html")
+        
+    }
+    if (seconds === 0) {
+        minutes--
+        seconds = 59
+        
+        // window.location.replace("index.html")
+    }
+    
+    console.log(seconds);
+    
+    document.querySelector(".second").innerHTML = seconds
+    document.querySelector(".minute").innerHTML = minutes
+    },1000)
+}
 
 
 
